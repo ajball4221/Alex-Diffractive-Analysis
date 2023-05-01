@@ -1,0 +1,1433 @@
+{
+    "me6A_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6AUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6AUpdated.txt"
+            }
+        }
+    },
+    "me5A_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame5AUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme5AUpdated.txt"
+            }
+        }
+    },
+    "me5A_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame5A.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame5A.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme5A.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme5A.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme5A_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me5A_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme5A_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6A_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6A_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6B_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6B_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6C_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6C_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6D_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6D_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6E_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6E_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6F_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6F_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6G_ext_2p2h_nx": {
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6G_ext_2p2h.txt"
+            }
+        }
+    },
+    "me6A_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6A.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6A_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6A.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6A_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6A_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6A_Closure_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_Audit_datame6A.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_Audit_mcme6A.txt"
+            }
+        }
+    },
+    "me6B_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6B.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6B_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6B.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6B_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6B_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6C_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6C.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6C_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6C.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6C_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6C_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6D_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6D.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6D_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6D.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6D_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6D_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6E_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6E.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6E_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6E.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6E_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6E_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6F_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6F.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6F_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6F.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6E_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6F_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6G_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6G.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6G_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6G.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6G_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6G_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6H_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6H.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6H_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6H.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6H_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6H_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6I_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6I.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6I_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6I.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6I_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6I_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me6J_Audit_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_datame6J.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_datame6J_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_Audit_mcme6J.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_ccqenue_mcme6J_MAD.txt"
+            },
+            "BigGenie": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme6J_BigGenie_MAD.txt"
+            }
+        }
+    },
+    "me1A_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1AUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1A_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1AUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1A_nx_MAD.txt"
+            }
+        }
+    },
+    "me1B_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1BUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1B_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1BUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1B_nx_MAD.txt"
+            }
+        }
+    },
+    "me1C_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1CUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1C_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1CUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1C_nx_MAD.txt"
+            }
+        }
+    },
+    "me1D_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1DUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1D_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1DUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1D_nx_MAD.txt"
+            }
+        }
+    },
+    "me1E_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1EUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1E_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1EUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1E_nx_MAD.txt"
+            }
+        }
+    },
+    "me1F_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1FUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1F_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1FUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1F_nx_MAD.txt"
+            }
+        }
+    },
+    "me1G_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame1GUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_datame1A_nx_MAD.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme1GUpdated.txt"
+            },
+            "MAD": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/playlist_xrootd_mcme1G_nx_MAD.txt"
+            }
+        }
+    },
+    "me6B_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6BUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6BUpdated.txt"
+            }
+        }
+    },
+    "me6C_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6CUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6CUpdated.txt"
+            }
+        }
+    },
+    "me6D_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6DUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6DUpdated.txt"
+            }
+        }
+    },
+    "me6E_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6EUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6EUpdated.txt"
+            }
+        }
+    },
+    "me6F_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6FUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6FUpdated.txt"
+            }
+        }
+    },
+    "me6G_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6GUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6GUpdated.txt"
+            }
+        }
+    },
+    "me6H_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.132858213525833e+20,
+                "used_POT": 1.1314478416135048e+20,
+                "playlist_location": "file_option/playlist_xrootd_datame6HUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 2.0400557978992116e+20,
+                "used_POT": 2.0400557978992116e+20,
+                "playlist_location": "file_option/playlist_xrootd_mcme6HUpdated.txt"
+            }
+        }
+    },
+    "me5A_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr5AUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr5AUpdated.txt"
+            }
+        }
+    },
+    "me6A_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6AUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6AUpdated.txt"
+            }
+        }
+    },
+    "me6B_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6BUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6BUpdated.txt"
+            }
+        }
+    },
+    "me6C_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6CUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6CUpdated.txt"
+            }
+        }
+    },
+    "me6D_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6DUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6DUpdated.txt"
+            }
+        }
+    },
+    "me6E_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6EUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6EUpdated.txt"
+            }
+        }
+    },
+    "me6F_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6FUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6FUpdated.txt"
+            }
+        }
+    },
+    "me6G_NCDiffSignal_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 7.940396238816292e+19,
+                "used_POT": 7.916736867022771e+19,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6GUpdated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.049112344870072e+21,
+                "used_POT": 3.049112344870072e+21,
+                "playlist_location": "file_option/playlist_xrootd_mcmeDfr6GUpdated.txt"
+            }
+        }
+    },
+    "me1M_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 1.7183497071591408e+20,
+                "used_POT": 1.7100155520314825e+20,
+                "playlist_location": "file_option/playlist_ccqenue_datame1M_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1M_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 1.6112077650422966e+20,
+                "playlist_location": "file_option/playlist_ccqenue_datame1M_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 4.1163179753483574e+20,
+                "used_POT": 4.1163179753483574e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1M_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1M_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 4.044114584919733e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1M_nx_fspline.txt"
+            }
+        }
+    },
+    "me1P_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 3.843234675568712e+19,
+                "used_POT": 3.838440413355886e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1P_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1P_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 4.410025440364703e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1P_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 1.0800405354571011e+20,
+                "used_POT": 1.0800405354571011e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1P_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1P_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 1.0073906624794421e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1P_nx_fspline.txt"
+            }
+        }
+    },
+    "me1B_NCDIF": {
+        "mc": {
+            "Sarah": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1B_NCDiff_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1B_NCDIF_Had.txt"
+            }
+        }
+    },
+    "me1L_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 1.3652680625417611e+19,
+                "used_POT": 1.3652469465631588e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1L_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1L_nx_Had.txt"
+            },
+            "fspline": {
+                "total_POT": 1.323510635735893e+19,
+                "used_POT": 1.3234934971009118e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1L_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 2.8796117351061967e+19,
+                "used_POT": 2.8796117351061967e+19,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1L_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1L_nx_Had.txt"
+            },
+            "fspline": {
+                "total_POT": 5.5206883953874805e+19,
+                "used_POT": 5.5206883953874805e+19,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1L_nx_fspline.txt"
+            }
+        }
+    },
+    "me1C_Hang_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 4.952672779548802e+19,
+                "used_POT": 4.732040123148304e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1C_nx_Sarah.txt"
+            },
+            "LLR": {
+                "total_POT": 4.733423202017427e+19,
+                "used_POT": 4.514472942593478e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1C_nx_LLR.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1C_nx_Had.txt"
+            },
+            "fspline": {
+                "total_POT": 4.949033705603423e+19,
+                "used_POT": 4.728526181546073e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1C_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 1.0547857333724555e+20,
+                "used_POT": 1.0547857333724555e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1C_nx_Sarah.txt"
+            },
+            "LLR": {
+                "total_POT": 1.9259890440899337e+20,
+                "used_POT": 1.9259890440899337e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1C_nx_LLR.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1C_nx_Had.txt"
+            },
+            "fspline": {
+                "total_POT": 1.659419314808672e+20,
+                "used_POT": 1.659419314808672e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1C_nx_fspline.txt"
+            }
+        }
+    },
+    "me1D_NCDIF": {
+        "mc": {
+            "Sarah": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1D_NCDiff_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1D_NCDIF_Had.txt"
+            }
+        }
+    },
+    "me1O_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 3.0002440683176632e+19,
+                "used_POT": 3.000247473777519e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1O_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1O_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 2.797078721485632e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1O_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 7.810996408262278e+19,
+                "used_POT": 7.810996408262278e+19,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1O_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1O_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 7.334936567759708e+19,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1O_nx_fspline.txt"
+            }
+        }
+    },
+    "me5a_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample5A_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample5A_Updated.txt"
+            }
+        }
+    },
+    "me6a_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6A_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6A_Updated.txt"
+            }
+        }
+    },
+    "me6b_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6B_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6B_Updated.txt"
+            }
+        }
+    },
+    "me6c_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6C_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6C_Updated.txt"
+            }
+        }
+    },
+    "me6d_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6D_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6D_Updated.txt"
+            }
+        }
+    },
+    "me6e_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6E_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6E_Updated.txt"
+            }
+        }
+    },
+    "me6f_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6F_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6F_Updated.txt"
+            }
+        }
+    },
+    "me6g_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6G_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6G_Updated.txt"
+            }
+        }
+    },
+    "me6i_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6I_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6I_Updated.txt"
+            }
+        }
+    },
+    "me6j_NueOnly_nx": {
+        "data": {
+            "fspline": {
+                "total_POT": 1.796853782414324e+20,
+                "used_POT": 1.7819232939977297e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6J_Updated.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 3.13264674229842e+20,
+                "used_POT": 3.13264674229842e+20,
+                "playlist_location": "file_option/playlist_xrootd_nueSample6J_Updated.txt"
+            }
+        }
+    },
+    "Muon+PhotonPC": {
+        "data": {
+            "6GeV_40PercentMu": {
+                "playlist_location": "file_option/PC_Muon+Photon_6GeV_40P.txt"
+            },
+            "4GeV_90PercentMu": {
+                "playlist_location": "file_option/PC_Muon+Photon_4GeV_90P.txt"
+            },
+            "4GeV_40PercentMu": {
+                "playlist_location": "file_option/PC_Muon+Photon_4GeV_40P.txt"
+            },
+            "4GeV_5PercentMu": {
+                "playlist_location": "file_option/PC_Muon+Photon_4GeV_5P.txt"
+            },
+            "4GeV_70PercentMu": {
+                "playlist_location": "file_option/PC_Muon+Photon_4GeV_70P.txt"
+            },
+            "6GeV_20PercentMu": {
+                "playlist_location": "file_option/PC_Muon+Photon_6GeV_20P.txt"
+            }
+        }
+    },
+    "Electron_PC": {
+        "data": {
+            "fspline": {
+                "total_POT": 0.0,
+                "used_POT": 0.0,
+                "playlist_location": "file_option/playlist_Electron_PC_fspline.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 0.0,
+                "used_POT": 3.03658893e+20,
+                "playlist_location": "file_option/playlist_Electron_PC_fspline.txt"
+            }
+        }
+    },
+    "me1N_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 1.1344065422657225e+20,
+                "used_POT": 1.1341751428048106e+20,
+                "playlist_location": "file_option/playlist_ccqenue_datame1N_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1N_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 1.0789150523173495e+20,
+                "playlist_location": "file_option/playlist_ccqenue_datame1N_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 2.634868906345953e+20,
+                "used_POT": 2.634868906345953e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1N_nx_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1N_nx_Had.txt"
+            },
+            "fspline": {
+                "used_POT": 2.4742293831801625e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1N_nx_fspline.txt"
+            }
+        }
+    },
+    "Pi0_PC": {
+        "data": {
+            "Sarah": {
+                "total_POT": 0.0,
+                "used_POT": 0.0,
+                "playlist_location": "file_option/playlist_Pi0_PC_anti.txt"
+            },
+            "fspline": {
+                "total_POT": 0.0,
+                "used_POT": 0.0,
+                "playlist_location": "file_option/playlist_Pi0_PC_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 0.0,
+                "used_POT": 6.545849312e+21,
+                "playlist_location": "file_option/playlist_Pi0_PC_anti.txt"
+            },
+            "fspline": {
+                "total_POT": 0.0,
+                "used_POT": 6.545849312e+21,
+                "playlist_location": "file_option/playlist_Pi0_PC_fspline.txt"
+            }
+        }
+    },
+    "me1A_NCDIF": {
+        "data": {
+            "birk": {
+                "total_POT": 9.620084145877257e+19,
+                "used_POT": 9.53252829175583e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1A_nx_birk.txt"
+            },
+            "fspline": {
+                "total_POT": 9.600705331624606e+19,
+                "used_POT": 9.513150022896255e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1A_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 2.8869552585543144e+21,
+                "used_POT": 2.8869552585543144e+21,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1A_NCDiff_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1A_NCDIF_Had.txt"
+            },
+            "fspline": {
+                "total_POT": 2.846947839567869e+21,
+                "used_POT": 3.648740489e+20,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1A_NCDiff_fspline.txt"
+            }
+        }
+    },
+    "Photon_PC": {
+        "data": {
+            "fspline": {
+                "total_POT": 0.0,
+                "used_POT": 0.0,
+                "playlist_location": "file_option/playlist_Photon_PC_fspline.txt"
+            }
+        },
+        "mc": {
+            "fspline": {
+                "total_POT": 0.0,
+                "used_POT": 7.698638598e+20,
+                "playlist_location": "file_option/playlist_Photon_PC_fspline.txt"
+            }
+        }
+    },
+    "me1A_Xtalk_On": {
+        "mc": {
+            "Sarah": {}
+        }
+    },
+    "me1A_OD": {
+        "mc": {
+            "Sarah": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1A_OD_Sarah.txt"
+            }
+        }
+    },
+    "me1C_NCDIF": {
+        "mc": {
+            "Sarah": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1C_NCDiff_Sarah.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1C_NCDIF_Had.txt"
+            }
+        }
+    },
+    "me1B_Hang_nx": {
+        "data": {
+            "Sarah": {
+                "total_POT": 1.8767691008554815e+19,
+                "used_POT": 1.8712426123386827e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1B_nx_Sarah.txt"
+            },
+            "LLR": {
+                "total_POT": 1.7991145500865761e+19,
+                "used_POT": 1.7935912832184779e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1B_nx_LLR.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_datame1B_nx_Had.txt"
+            },
+            "fspline": {
+                "total_POT": 1.879426509759505e+19,
+                "used_POT": 1.8739000223169774e+19,
+                "playlist_location": "file_option/playlist_ccqenue_datame1B_nx_fspline.txt"
+            }
+        },
+        "mc": {
+            "Sarah": {
+                "total_POT": 9.959826718070248e+19,
+                "used_POT": 9.959826718070248e+19,
+                "playlist_location": "file_option/playlist_ccqenue_mcme1B_nx_Sarah.txt"
+            },
+            "Sarah-xtalk-off": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1B_nx_xtalkoff.txt"
+            },
+            "Had": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1B_nx_Had.txt"
+            },
+            "Sarah-xtalk": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1B_nx_xtalk.txt"
+            }
+        }
+    },
+    "MAD": {
+        "data": {
+            "sarah": {
+                "tree": "NuECCQE",
+                "playlist_location": "file_option/CCNuE-Sarah-data.txt"
+            },
+            "mad_proton": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/MasterAnaDev-data-test-proton.txt"
+            },
+            "mad": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/MasterAnaDev-test-data.root"
+            },
+            "ccnue": {
+                "tree": "NuECCQE",
+                "playlist_location": "file_option/CCNuE-validate-data.root"
+            }
+        },
+        "mc": {
+            "sarah": {
+                "tree": "NuECCQE",
+                "playlist_location": "file_option/CCNuE-Sarah-mc.txt"
+            },
+            "mad_proton": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/MasterAnaDev-test-proton.txt"
+            },
+            "mad": {
+                "tree": "MasterAnaDev",
+                "playlist_location": "file_option/MasterAnaDev-test.root"
+            },
+            "ccnue": {
+                "tree": "NuECCQE",
+                "playlist_location": "file_option/CCNuE-validate.root"
+            }
+        }
+    },
+    "me1A_ext_2p2h": {
+        "mc": {
+            "Sarah": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1A_extend2p2h_Sarah.txt"
+            }
+        }
+    },
+    "me1A_NCDiff": {
+        "mc": {
+            "fspline": {
+                "playlist_location": "file_option/playlist_ccqenue_mcme1A_NCDiff_fspline.txt"
+            }
+        }
+    }
+}

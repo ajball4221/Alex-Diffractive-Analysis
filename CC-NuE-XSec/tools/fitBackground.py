@@ -9,7 +9,8 @@ from tools.PlotLibrary import HistHolder
 from config.AnalysisConfig import AnalysisConfig
 from config.PlotConfig import ELECTRON_ENERGY_BINNING
 
-ROOT.TH1.AddDirectory(True)
+ROOT.TH1.AddDirectory(True) # If you make this false, the error messages go away but the fitter just stops working because it depends on weird ROOT behavior with the POT scaling applying in ways I don't understand but it works as is
+# If you really want to make this false, you gotta go back and rethink how the fitter grabs the root files and turn on the POT scaling. If you don't fix how it grabs ROOT files after making it false, this code will take up all the RAM on your system. 
 
 def getPOTFromFile(filename):
     metatree = ROOT.TChain("Meta")
@@ -18,7 +19,7 @@ def getPOTFromFile(filename):
     else:
         return None
 
-def GetPOTScale(data_path,mc_path): # If you're a future REU student reading this, I have no idea what this does but it works now
+def GetPOTScale(data_path,mc_path): # This is to correct for the fact that the mc and data have different simulated numbers of target protons in the neutrino maker
     pots = [None,None]
     for i,t in enumerate(["data","mc"]):
         path = [data_path,mc_path][i]
@@ -80,13 +81,13 @@ def ErrExtractHists(data_hists, mc_hists, err_type, universe_num):
     augment = SubtractPoissonHistograms(data,other,pot_scale) # This subtracts the LHS const from the data to give the RHS of the equation
     return [coherent,nu_e,piZero,ncdiff,augment]
 
-def RejectSmallBins(hist):
-    for i in range(hist.GetSize()):
-        if hist.GetBinContent(i) < 1e-3:
-            hist.SetBinContent(i,0)
-    return hist
+#def RejectSmallBins(hist): # This shouldnt be needed
+#    for i in range(hist.GetSize()):
+#        if hist.GetBinContent(i) < 1e-3:
+#            hist.SetBinContent(i,0)
+#    return hist
 
-def HistListtoArray(histlist):
+def HistListtoArray(histlist): # This converts the root histograms being passed to it into an array
     histarray = np.zeros((len(histlist),histlist[0].GetSize()-1))
     for i,hist in enumerate(histlist):
         for j in range(hist.GetSize()-1):
@@ -95,7 +96,7 @@ def HistListtoArray(histlist):
         histarray = histarray.flatten()
     return histarray
 
-def SetupMatrices(dataarray):
+def SetupMatrices(dataarray): # This converts the weird data array that has a weird data structure into matrices that get the weights for each bin
     numofmatrices = len(dataarray[0,0])
     matrices = np.zeros((numofmatrices,4,4))
     vectors = np.zeros((numofmatrices,4))
@@ -117,7 +118,7 @@ def DoLinearAlgebra(inversesArray,vectorArray):
     final_weights = np.add(np.ones(solutions.shape),solutions) # Corrects for the fact that the matrices are solving for weight-1
     return final_weights
 
-def NormalInverse(matrices):
+def NormalInverse(matrices): #This shouldn't be called anywhere it's useful for testing how much the SVD made things weird
     inverses = []
     for matrix in matrices:
         inverse = np.linalg.inv(matrix)
@@ -140,6 +141,7 @@ def MPInverse(matrices):
                           [False,False,False, True],
                           [False, True, True, True],
                           [False,False, False, True]],dtype = bool) #Picks singular values to be discarded
+    # These may look different for you and you may need to rethink these
     for i,svd in enumerate(svds):
         for j in range(len(svd[1])):
             if discarded[i,j]:

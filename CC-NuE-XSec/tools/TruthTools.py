@@ -2,7 +2,7 @@ import ROOT
 import math
 from operator import itemgetter
 import random
-
+import os, inspect
 
 def ArachneLink(event):
     #head = "https://minerva05.fnal.gov/rodriges/Arachne/arachne.html"
@@ -621,7 +621,6 @@ def OverlappingEnergy(event):
 def PiZeroE(event):
     types = event.mc_FSPartPDG
     energies = event.mc_FSPartE
-        
     for i, val in enumerate(types):
         if val == 111:
             energy = energies[i]
@@ -631,7 +630,6 @@ def PiZeroE_diff(event):
     if event.mc_intType ==10:
         types = event.mc_FSPartPDG
         energies = event.mc_FSPartE
-
         for i, val in enumerate(types):
             if val == 111:
                 energy = energies[i]
@@ -748,4 +746,10 @@ def EePlusEOut(event):
 def EePlusEOut2(event):
     return event.kin_cal.reco_E_lep + event.ConeOutsideE() 
 
-
+def CalcApothem(x,y):
+    x=abs(x)
+    y=abs(y)
+    if ( x == 0 or y/x > 1/math.sqrt(3)):
+        return (y+x/math.sqrt(3))/2*math.sqrt(3)
+    else:
+        return x

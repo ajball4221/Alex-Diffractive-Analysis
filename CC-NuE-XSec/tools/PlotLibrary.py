@@ -170,15 +170,15 @@ VARIABLE_DICT = {
 
     "Epi(1-cos(pi))" : {
         "name":"Epi_cospi",
-        "title":"E_#pi(1-cos(#theta_#pi)) (GeV)",
-        "binning": [0.005* i for i in range(0,41)],
+        "title":"Coherence",
+        "binning": [0.005* i for i in range(0,61)],
         "value_getter": lambda event: event.kin_cal.reco_E_lep*(1-event.kin_cal.reco_cos_theta_lep)
     },
 
     "PsiEe" : {
         "name":"PsiEe",
         "title":"Psi * E_e (GeV)",
-        "binning": [0.1*i for i in range(41)],
+        "binning": [0.1*i for i in range(31)],
         "value_getter": lambda event: event.Psi*event.kin_cal.reco_E_lep
     },
 
@@ -328,8 +328,16 @@ VARIABLE_DICT = {
     {
         "name" : "Eavail",
         "title" : "E_{avail} (GeV)",
+        "binning" : PlotConfig.VISIBLE_ENERGY_BINNING,
+        #"binning" : PlotConfig.LOW_RECOIL_BIN_Q0,
+        "value_getter" : lambda event: event.kin_cal.reco_visE
+    },
+    "High Visible Energy":
+    {
+        "name" : "Eavail",
+        "title" : "E_{avail} (GeV)",
         #"binning" : [PlotConfig.VISIBLE_ENERGY_BINNING],
-        "binning" : PlotConfig.LOW_RECOIL_BIN_Q0,
+        "binning" : PlotConfig.HIGH_VISIBLE_ENERGY_BINNING,
         "value_getter" : lambda event: event.kin_cal.reco_visE
     },
     "Sum Visible Energy":
@@ -683,7 +691,7 @@ PLOT_SETTINGS= {
     "Lepton Energy":
     {
         "name" : "Eel",
-        "title" : "Lepton Energy; Reconstructed E_lep (GeV); dNEvents/dE_lep", 
+        "title" : "Lepton Energy; Downstream Cone Energy (GeV); dNEvents/dE_{cone}", 
         "binning" : [PlotConfig.ELECTRON_ENERGY_BINNING],  
         "value_getter" : [lambda event: event.kin_cal.reco_E_lep],    
         #"value_getter" : [lambda event: TruthTools.Print(event)], 
@@ -808,12 +816,20 @@ PLOT_SETTINGS= {
         "name" : "Eavail",
         "title" : "Available Energy; E_{avail} (GeV); dNEvents/dE_{avail}",
         #"binning" : [PlotConfig.VISIBLE_ENERGY_BINNING],
-        "binning" : [PlotConfig.LOW_RECOIL_BIN_Q0],
+        "binning" : [PlotConfig.VISIBLE_ENERGY_BINNING],
         #"value_getter" : [lambda event: TruthTools.EvailStudy(event)],
         "value_getter" : [lambda event: event.kin_cal.reco_visE],
         "tags": reco_tags
     },
-
+    "High Visible Energy":
+    {
+        "name" : "Eavail",
+        "title" : "Available Energy; E_{avail} (GeV); dNEvents/dE_{avail}",
+        #"binning" : [PlotConfig.VISIBLE_ENERGY_BINNING],
+        "binning" : [PlotConfig.HIGH_VISIBLE_ENERGY_BINNING],
+        "value_getter" : [lambda event: event.kin_cal.reco_visE],
+        "tags": reco_tags
+    },
     "True Visible Energy":
     {
         "name" : "tEavail",
@@ -948,6 +964,28 @@ PLOT_SETTINGS= {
         "value_getter" : [lambda event: event.kin_cal.reco_P_lep*math.sin(event.kin_cal.reco_theta_lep_rad)],
         "tags":reco_tags
     },
+    "Epi(1-cos(pi))" : {
+        "name":"Epi_cospi",
+        "title":"Coherence; E_{#pi}(1-cos(#theta_{#pi})) (GeV); NEvents",
+        "binning": [[0.005* i for i in range(0,61)]],
+        "value_getter": [lambda event: event.kin_cal.reco_E_lep*(1-event.kin_cal.reco_cos_theta_lep)],
+        "tags": reco_tags
+    },
+    "Vertex Z" : {
+        "name" : "vtx_z",
+        "title": "Vertex Z;Vertex Z (mm);NEvents",
+        "binning" : [PlotConfig.VERTEX_Z_BINNING],
+        "value_getter" : [lambda event: event.vtx[2]],
+        "tags": reco_tags
+    },
+    "Vertex Apothem":
+    {
+        "name":"vtx_apothem",
+        "title":"Vertex Apothem;Vertex Apothem(mm);NEvents",
+        "binning": [PlotConfig.APOTHEM_BINNING],
+        "value_getter": [lambda event: TruthTools.CalcApothem(event.vtx[0],event.vtx[1])],
+        "tags": reco_tags
+    },
     "Energy Inside Cone" :
     {
         "name" : "InsideConeE",
@@ -1032,7 +1070,7 @@ PLOT_SETTINGS= {
     "Inline Upstream Energy" :
     {
         "name": "InlineUpstream_Energy",
-        "title" : "InlineUpstream; In-line energy upstream of vertex (MeV); NEvents ",
+        "title" : "InlineUpstream; Inline Upstream Energy (MeV); dNEvents/dE_{IU} ",
         "binning": [PlotConfig.UPSTREAM_INLINE_ENERGY_BINS],
         #"value_getter" :[ lambda event: event.UpstreamInlineEnergy],
         "value_getter" :[ lambda event: TruthTools.Rebin(event)],
@@ -1126,6 +1164,13 @@ PLOT_SETTINGS= {
         "title" : "Psi; Extra energy ratio; dNEvents/dPsi",
         "binning" : [PlotConfig.EXTRA_ENERGY_BINNING],
         "value_getter" : [lambda event: event.Psi],
+        "tags": reco_tags,
+    },
+    "PsiEe" : {
+        "name":"PsiEe",
+        "title":"Psi * E_e (GeV)",
+        "binning": [[0.1*i for i in range(31)]],
+        "value_getter": [lambda event: event.Psi*event.kin_cal.reco_E_lep],
         "tags": reco_tags,
     },
     "Transverse Shower Asymmetry":
@@ -1590,14 +1635,21 @@ PLOT_SETTINGS= {
         "value_getter" : [lambda event: event.mc_vtx[2]],
         "tags": truth_signal_tags
     },
-
+    "True Signal Vertex Apothem":
+    {
+        "name" : "Vertex_apothem_true_signal",
+        "title": "Vertex Apothem; Vertex Apothem(mm); NEvents",
+        "binning" : [PlotConfig.APOTHEM_BINNING],
+        "value_getter" : [lambda event: TruthTools.CalcApothem(event.mc_vtx[0],event.mc_vtx[1])],
+        "tags": truth_signal_tags
+    },
      "True Signal Neutrino Energy":
     {
         "name" : "tEnu_true_signal",
         "title" : "True Neutrino Energy; E_{#nu} (GeV); NEvents/GeV",
         "binning" : [PlotConfig.NEUTRINO_ENERGY_BINNING],
         "value_getter" : [lambda event:event.kin_cal.true_enu_genie],
-        "tags": truth_signal_tags
+         "tags": truth_signal_tags
     },
 
 

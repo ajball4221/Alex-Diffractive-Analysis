@@ -36,7 +36,6 @@ M_mu_sqr = M_mu**2
 # The base universe, define functions to be used for all universes.
 class CVUniverse(ROOT.PythonMinervaUniverse, object):
     is_pc = False
-    is_dfr = False
     def __init__(self, chain, nsigma = None): #nsigma is None for data because we don't shift data
         super(CVUniverse,self).__init__(chain,0 if nsigma is None else nsigma)
         self.weight = None
@@ -126,8 +125,6 @@ class CVUniverse(ROOT.PythonMinervaUniverse, object):
             return self.weight
         if self.nsigma is None:
             self.weight = 1
-        elif self.is_dfr:
-            self.weight = self.GetDiffractiveWeight()
         else:
             self.weight = self.GetStandardWeight()#self.weight = self.GetModelWeight() if self.is_pc else self.GetStandardWeight()
         if bkgtuning or self.nsigma is None:
@@ -144,10 +141,8 @@ class CVUniverse(ROOT.PythonMinervaUniverse, object):
         weight *= self.GetLowRecoil2p2hWeight()
         weight *= self.GetRPAWeight()
         weight *= self.GetMyLowQ2PiWeight()
-        weight *= self.GetGeantHadronWeight()
-        weight *= self.GetAlexWeight()     
-        # for _ in self.weighters:
-        #     weight *= _()
+        weight *= self.GetGeantHadronWeight() # Disable if doing closure test
+        weight *= self.GetAlexWeight() # Disable if doing closure test
 
         if weight < 0: weight = 0.1 # No negative weights, that would be dumb
 
@@ -238,17 +233,9 @@ class CVUniverse(ROOT.PythonMinervaUniverse, object):
         #return 0
         return max(0,fuzz) * SystematicsConfig.AVAILABLE_E_CORRECTION
 
-    def GetDiffractiveWeight(self):
-        dfrweight = GetAlexWeight(self)
-        #dfrweight = GetDfrWeight(self)
-        return dfrweight
 
     def GetAlexWeight(self): #Weights custom added by Alex with his matrix svd thing
         alexweight = GetAlexWeights(self)
-        '''if self.ShortName() == "cv":
-            alexweight = GetAlexWeights(self) # Main weights determined by main cv universe
-        else:
-            alexweight = GetAlexUniverseWeights(self) # If not the main cv universe, use the weights for the systematics universes'''
         return alexweight
 
     def GetLeakageCorrection(self):
@@ -738,11 +725,10 @@ class BkgTuneUniverse(CVUniverse,object):
          return [BkgTuneUniverse(chain,1,i) for i in ["FHCPt_tune1","FHCPt_tune2"]]
 
 
-def GetAllSystematicsUniverses(chain,is_data,is_pc =False,is_dfr = False,exclude=None,playlist=None):
+def GetAllSystematicsUniverses(chain,is_data,is_pc =False,exclude=None,playlist=None):
     #use list because I want to control the order, process cv first, then vertical shifts, then lateral shifts
     universes = []
     CVUniverse.is_pc = is_pc
-    CVUniverse.is_dfr = is_dfr
     CVUniverse.LeafGetters= {}
     if is_data:
         #data has only cv universe
@@ -780,43 +766,43 @@ def GetAllSystematicsUniverses(chain,is_data,is_pc =False,is_dfr = False,exclude
             # Vertical shift first to skip some cut calculation
             #Flux universe
             universes.extend(FluxUniverse.GetSystematicsUniverses(chain ))
-
+#
             #Genie universe
             universes.extend(GenieUniverse.GetSystematicsUniverses(chain ))
             universes.extend(GenieRvx1piUniverse.GetSystematicsUniverses(chain ))
             universes.extend(GenieFaCCQEUniverse.GetSystematicsUniverses(chain ))
-
+#
             # #2p2h universes
             universes.extend(Universe2p2h.GetSystematicsUniverses(chain ))
-
+#
             #RPA universe:
             universes.extend(RPAUniverse.GetSystematicsUniverses(chain ))
-
+#
             #LowQ2PionUniverse
             universes.extend(LowQ2PionUniverse.GetSystematicsUniverses(chain ))
             universes.extend(LowQ2PionUniverseAlt.GetSystematicsUniverses(chain ))
-
+#
             # #birk shift universe
             # #universes.extend(BirksShiftUniverse.GetSystematicsUniverses(chain ))
-
+#
             # MKModelUniverse
             universes.extend(MKModelUniverse.GetSystematicsUniverses(chain ))
-
+#
             #FSIWeighUniverse
             universes.extend(FSIWeightUniverse.GetSystematicsUniverses(chain ))
-
+#
             #SuSAValenciaUniverse
             universes.extend(SusaValenciaUniverse.GetSystematicsUniverses(chain ))
-
+#
             #hadron reweight shifting universe
             universes.extend(GeantHadronUniverse.GetSystematicsUniverses(chain ))
-
+#
             #bkgtune universe
             universes.extend(BkgTuneUniverse.GetSystematicsUniverses(chain ))
-
+#
             #target mass universe
             universes.extend(TargetMassUniverse.GetSystematicsUniverses(chain ))
-
+#
             #Lateral Universes:
             #Electron momentum universe
             if abs(SystematicsConfig.AnaNuPDG)==12:
@@ -829,7 +815,7 @@ def GetAllSystematicsUniverses(chain,is_data,is_pc =False,is_dfr = False,exclude
                 universes.extend(MuonUniverseMinos.GetSystematicsUniverses(chain ))
             else:
                 raise ValueError ("AnaNuPDG should be \pm 12 or 14, but you set {}".format(SystematicsConfig.AnaNuPDG))
-
+#
             # #beam angle shift universe
             universes.extend(BeamAngleShiftUniverse.GetSystematicsUniverses(chain ))
             #particle response shift universe

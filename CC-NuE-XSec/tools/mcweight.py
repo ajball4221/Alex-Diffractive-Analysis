@@ -124,6 +124,7 @@ def GetFluxWeight(event, i_universe = None):
                                           PlaylistLookup(event.mc_run),
                                           FluxReweighter.gen2thin,
                                           FluxReweighter.g4numiv6)
+        print("Ruh roh")
     if i_universe is None:
         return flux_reweighter.GetFluxCVWeight(event.mc_incomingE/1e3,event.mc_incoming)
     else :

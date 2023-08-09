@@ -137,7 +137,7 @@ def MPInverse(matrices):
                           [False,False,False,False],
                           [False,False,False,False],
                           [False,False,False,False],
-                          [False,False,False, True],
+                          [False,False,False,False],
                           [False,False,False, True],
                           [False, True, True, True],
                           [False,False, False, True]],dtype = bool) #Picks singular values to be discarded
@@ -169,9 +169,9 @@ def GetBins(hist,print_results = False): # If you want to print out the binds in
 
 def GetPreweightedROOTFiles(weighting_playlist):
     if weighting_playlist == None: #If not specified, use the default weighting files
-        mc_path = str(os.environ["CCNUEROOT"]+"/tools/kin_dist_mcAlex_prenoq3_nx_collab1_fspline.root")
+        mc_path = str(os.environ["CCNUEROOT"]+"/tools/kin_dist_mcAlex_prefiducial_nx_collab1_fspline.root")
         mc_file = ROOT.TFile.Open(mc_path)
-        data_path = str(os.environ["CCNUEROOT"]+"/tools/kin_dist_dataAlex_prenoq3_nx_collab1_fspline.root")
+        data_path = str(os.environ["CCNUEROOT"]+"/tools/kin_dist_dataAlex_prefiducial_nx_collab1_fspline.root")
         data_file = ROOT.TFile.Open(data_path)
         pot_scale = GetPOTScale(data_path,mc_path)
     else:
@@ -191,6 +191,7 @@ def GetCVWeights(mc_file,data_file,pot_scale):
         dataEel_hist = HistHolder("Lepton Energy",data_file,sideband,is_mc = False) # I'm using HistHolders to access the backgrounds
         mcEel_hists.POTScale(False)
         dataEel_hist.POTScale(False)
+        print(sideband)
         listofhists = PrimeExtractHists(dataEel_hist, mcEel_hists)
         arrayofhists = HistListtoArray(listofhists)
         sideband_list.append(arrayofhists)
@@ -209,10 +210,11 @@ def GetSystematicUniverseWeights(mc_file,data_file,pot_scale):
     # Now for the Systematic Universes
     sidebands = ["Coherent","Electron_Neutrino","Pi0","Signal"]
     err_weights_dict = {}
-    universe_list = [["Flux",200],["GENIE_AGKYxF1pi",2],["GENIE_AhtBY",2],["GENIE_BhtBY",2],["GENIE_CCQEPauliSupViaKF",2],["GENIE_CV1uBY",2],["GENIE_CV2uBY",2],["GENIE_EtaNCEL",2],["GENIE_FrAbs_N",2],["GENIE_FrAbs_pi",2],["GENIE_FrCEx_N",2],["GENIE_FrCEx_pi",2],["GENIE_FrElas_N",2],["GENIE_FrElas_pi",2],["GENIE_FrInel_N",2],["GENIE_FrPiProd_N",2],["GENIE_FrPiProd_pi",2],["GENIE_MFP_N",2],["GENIE_MFP_pi",2],["GENIE_MaNCEL",2],["GENIE_MaRES",2],["GENIE_MvRES",2],["GENIE_NormCCRES",2],["GENIE_NormDISCC",2],["GENIE_NormNCRES",2],["GENIE_RDecBR1gamma",2],["GENIE_Rvn2pi",2],["GENIE_Rvp2pi",2],["GENIE_Theta_Delta2Npi",2],["GENIE_VecFFCCQEshape",2],["GENIE_Rvn1pi",2],["GENIE_Rvp1pi",2],["GENIE_MaCCQE",2],["Low_Recoil_2p2h_Tune",3],["RPA_HighQ2",2],["RPA_LowQ2",2],["LowQ2Pi",2],["LowQ2Pi_None",1],["MK_model",1],["fsi_weight",3],["SuSA_Valencia_Weight",1],["GEANT_Proton",2],["GEANT_Neutron",2],["GEANT_Pion",2],["bkg_tune",2],["Target_Mass_CH",2],["Muon_Energy_MINERvA",2],["Muon_Energy_MINOS",2],["beam_angle",4],["response_p",2],["response_meson",2],["response_em",2],["response_other",2],["response_xtalk",2],["Leakage_Uncertainty",2]]
-    for error_type,error_universes in universe_list:
+    sample_hist = mc_file.Eel # This is to get the names of the error bands
+    for error_type in sample_hist.GetErrorBandNames():
+        error_type = str(error_type) # I really hate that this line has to be here
         err_type_weights = []
-        for universe_num in range(error_universes):
+        for universe_num in range(sample_hist.GetVertErrorBand(error_type).GetNHists()):
             sideband_list = []
             for sideband in sidebands:
                 mcEel_hists = HistHolder("Lepton Energy",mc_file,sideband,is_mc = True,pot = pot_scale) 

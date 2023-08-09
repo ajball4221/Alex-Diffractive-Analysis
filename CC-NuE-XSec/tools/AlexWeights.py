@@ -30,14 +30,15 @@ IsNCPi0 = lambda event: IsNC(event) and IsPi0InFinalState(event)
 IsCCPi0 = lambda event: IsCC(event) and IsPi0InFinalState(event)
 IsNCDiff = lambda event: event.mc_intType == 10
 
-mainweights,univweights = fitBackground.RunAlexWeighter()
+if not AnalysisConfig.unweighted:
+    mainweights,univweights = fitBackground.RunAlexWeighter()
 
 def GetAlexWeights(event):
     doWeights = not AnalysisConfig.unweighted
     weight = 1
     Elep = event.kin_cal.reco_E_lep
     pionE = TruthTools.PiZeroE(event)
-    if IsCCQEnu_e(event) or IsnonCCQEnu_e(event): # Electron Neutrino event (first because of the IUE weights)
+    if (IsCCQEnu_e(event) or IsnonCCQEnu_e(event)) and not IsNCDiff(event): # Electron Neutrino event (first because of the IUE weights)
         eventType = 1
         if 10 <= event.UpstreamInlineEnergy < 15:
             weight *= 1.15
@@ -71,7 +72,14 @@ def GetAlexWeights(event):
                 break
     return weight
 
-
+'''def EnergyCheck(event):
+    nuPDG = event.mc_incoming
+    Enu_f = -999.999
+    for i, val in enumerate(event.mc_FSPartPDG):
+        if val == nuPDG:
+            Enu_f = mc_FSPartE[i]
+    if Enu_f != -999.999:
+        Enu_i = '''
 '''weights_old = np.array([[ 1.749526, 1.203664, 0.972739, 2.550476],
  [ 1.904704, 1.24438 , 0.675828, 4.353756],
  [ 1.954846, 1.249705, 1.162673, 2.794467],

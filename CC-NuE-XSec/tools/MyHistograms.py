@@ -175,6 +175,7 @@ class PlotProcessor():
             self.FillHist(universe,value,wgt)
 
     def FillHist(self,universe,value,wgt):
+        #if self.histwrapper.name == "true_pizeroE" and universe.ShortName() == "cv": print("True Signal Event",universe.GetEntry(),"passed with weight",wgt,"Fiducial Z",universe.mc_vtx[2])
         if value.count(None) == 0:
             args = value+[wgt]
             self.histwrapper.FillUniverse(universe, *args)

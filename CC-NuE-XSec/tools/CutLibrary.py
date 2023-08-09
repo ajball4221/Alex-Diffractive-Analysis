@@ -217,8 +217,23 @@ CUT_CONFIGS = {
     },
     "Eavail": {
         "value_getter": lambda event, nprong: event.kin_cal.reco_visE,
-        "cut_fn": lambda vals: vals <= CutConfig.Reco_visEcut,
-        "variable_range": [0.4* i for i in range(0,11)]
+        "cut_fn": lambda vals: vals < CutConfig.Reco_visEcut,
+    #    "variable_range": [0.4* i for i in range(0,11)]
+    },
+    "InverseEavail": {
+        "value_getter": lambda event, nprong: event.kin_cal.reco_visE,
+        "cut_fn": lambda vals: vals >= CutConfig.Reco_visEcut,
+    #    "variable_range": [0.4* i for i in range(0,11)]
+    },
+    "EavailUpperPi0Cut": {
+        "value_getter": lambda event, nprong: event.kin_cal.reco_visE,
+        "cut_fn": lambda vals: vals < CutConfig.RECO_VISE_PI0_UPPERBOUND,
+    #    "variable_range": [0.4* i for i in range(0,11)]
+    },
+    "InverseEavailUpperPi0Cut": {
+        "value_getter": lambda event, nprong: event.kin_cal.reco_visE,
+        "cut_fn": lambda vals: vals >= CutConfig.RECO_VISE_PI0_UPPERBOUND,
+    #    "variable_range": [0.4* i for i in range(0,11)]
     },
     "UIEWeightedPos" : {
         "value_getter": lambda event,nprong: event.UpstreamInlineEnergyWgtdPosMean,

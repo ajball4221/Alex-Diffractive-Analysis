@@ -2,7 +2,7 @@
 
 """
   eventSelection.py:
-  The executalbe to perform event selection
+  The executable to perform event selection
 
 """
 
@@ -25,17 +25,13 @@ from tools.KinematicsCalculator import KinematicsCalculator
 from tools.MyHistograms import MakePlotProcessors
 
 
-#def timeout_handler(signum,frame):
-#    print "some steps takes forever to finish, I am not going to wait."
-#    raise Exception("time out")
-
 ROOT.TH1.AddDirectory(False)
 
 def plotRecoKin(mc, chainwrapper, outfile):
     """ The main code of event selection """
     kin_cal = KinematicsCalculator(correct_beam_angle=True, correct_MC_energy_scale=False, calc_true = mc, is_pc = AnalysisConfig.is_pc)
     eventClassifier = EventClassifier(classifiers=["Truth","Reco"] if mc else ["Reco"], use_kin_cuts=True, use_sideband = AnalysisConfig.sidebands)
-    universes = GetAllSystematicsUniverses(chainwrapper, not mc, AnalysisConfig.is_pc,AnalysisConfig.is_dfr, AnalysisConfig.exclude_universes)
+    universes = GetAllSystematicsUniverses(chainwrapper, not mc, AnalysisConfig.is_pc,AnalysisConfig.exclude_universes)
     for univ in chain.from_iterable(iter(universes.values())):
         univ.LoadTools(kin_cal,eventClassifier)
 
@@ -83,7 +79,7 @@ def plotRecoKin(mc, chainwrapper, outfile):
 def plotTruthKin(chainwrapper,outfile):
     kin_cal = KinematicsCalculator(correct_beam_angle=True, correct_MC_energy_scale=False, calc_true = True, calc_reco = False)
     eventClassifier = EventClassifier(classifiers=["Truth"],use_kin_cuts=True, use_sideband=[])
-    universes = GetAllSystematicsUniverses(chainwrapper, False, AnalysisConfig.is_pc, AnalysisConfig.is_dfr, AnalysisConfig.exclude_universes)
+    universes = GetAllSystematicsUniverses(chainwrapper, False, AnalysisConfig.is_pc, AnalysisConfig.exclude_universes)
     for univ in chain.from_iterable(iter(universes.values())):
         univ.LoadTools(kin_cal,eventClassifier)
 
@@ -102,8 +98,8 @@ def plotTruthKin(chainwrapper,outfile):
             if AnalysisConfig.skip_2p2h and universe.mc_intType==8:
                 continue
 
-            if abs(universe.mc_incoming)!=AnaNuPDG: #no way this is my signal. hopefully speed up processing.
-                continue 
+            #if abs(universe.mc_incoming)!=AnaNuPDG: #no way this is my signal. hopefully speed up processing.
+            #    continue # Alex note here: this probably helped Hang but it breaks efficiency denominator for NuPDG = -14 
             #only no lateral shifts in truth quantity
             if universe.ShortName()=="cv":
                 kin_cal.CalculateKinematics(universe)

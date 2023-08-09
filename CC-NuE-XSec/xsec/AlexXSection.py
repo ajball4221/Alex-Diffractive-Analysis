@@ -84,14 +84,14 @@ def BinNormalize(hist):
     hist.Divide(hist,bin_sizes)
     return hist
 
-def Integral(hist):
+def Integral(hist,name):
     integral = 0
     errors = np.zeros(hist.GetNbinsX())
     for i in range(hist.GetNbinsX()):
         integral += hist.GetBinContent(i+1)*(hist.GetXaxis().GetBinLowEdge(i+2)-hist.GetXaxis().GetBinLowEdge(i+1))
         errors[i] = hist.GetBinError(i+1)*(hist.GetXaxis().GetBinLowEdge(i+2)-hist.GetXaxis().GetBinLowEdge(i+1))
     error = np.sqrt(np.sum(np.square(errors)))
-    print("The integral of the histogram is",integral,"and the error is",error)
+    print("The integral of the",name,"cross section is",integral,"and the error is",error)
 
 playlist = AnalysisConfig.playlist
 unfoldedFile = ROOT.TFile.Open("/minerva/data/users/ajball/nu_e/"+str(playlist)+"_unfolded.root","READ")
@@ -111,7 +111,7 @@ unfoldedFile.Close()
 efficiencyFile.Close()
 
 data_pot = getPOTFromFile("/minerva/data/users/ajball/nu_e/kin_dist_data"+str(playlist)+"_collab1_fspline.root")
-mc_pot = getPOTFromFile("/minerva/data/users/ajball/nu_e/kin_dist_mcAlex_tcutdfronly_nx_collab1_fspline.root")
+mc_pot = getPOTFromFile("/minerva/data/users/ajball/nu_e/kin_dist_mc"+str(playlist)+"_collab1_fspline.root")
 
 t_fitted_xsec = GetXSectionHistogram(t_fitted_hist,t_efficiency,False)
 t_matrix_xsec = GetXSectionHistogram(t_matrix_hist,t_efficiency,False)
@@ -137,6 +137,7 @@ outFile = ROOT.TFile.Open(outPath,"RECREATE")
 
 t_canvas = ROOT.TCanvas("c1","c1",1600,1200)
 t_fitted_err = t_fitted_xsec.GetCVHistoWithError()
+Integral(t_fitted_err,"t Exponential Form")
 t_fitted_err.SetMarkerStyle(20)
 t_fitted_err.SetMarkerColor(2)
 t_fitted_err.SetMarkerSize(2)
@@ -150,10 +151,11 @@ t_fitted_err.GetXaxis().SetTitleSize(0.045)
 t_fitted_err.GetYaxis().SetTitle("d#sigma/d|t| (cm^{2}/(GeV/c)^{2}/hydrogen)")
 t_fitted_err.GetYaxis().SetTitleFont(62)
 t_fitted_err.GetYaxis().SetTitleSize(0.045)
-t_fitted_err.SetTitle("Exponential Fit")
+t_fitted_err.SetTitle("Exponential Form")
 t_fitted_err.SetLabelFont(62,"xyz")
 
 t_recovered_err = t_matrix_xsec.GetCVHistoWithError()
+Integral(t_recovered_err,"t Matrix")
 t_recovered_err.SetMarkerStyle(21)
 t_recovered_err.SetMarkerColor(4)
 t_recovered_err.SetMarkerSize(2)
@@ -186,6 +188,7 @@ t_canvas.Print("datafolder/xsecplots/t_xsec_log.png","png")
 pion_canvas = ROOT.TCanvas("c2","c2",1600,1200)
 
 pion_recovered_err = pion_matrix_xsec.GetCVHistoWithError()
+Integral(pion_recovered_err,"Pion Matrix")
 #pion_recovered_err = FixNegativeBins(pion_recovered_err)
 pion_recovered_err.SetMarkerStyle(21)
 pion_recovered_err.SetMarkerSize(1.5)

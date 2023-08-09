@@ -4,18 +4,25 @@
    author: H. Su
 """
 from collections import OrderedDict
-from config.CutConfig import KINEMATICS_CUTS,T_CUT,PION_ENERGY_CUT
+from config.CutConfig import KINEMATICS_CUTS,T_CUT,PION_ENERGY_CUT,FIDUCIAL_Z_RANGE,FIDUCIAL_APOTHEM
 from tools.CutLibrary import CUTS
 from tools import TruthTools
 
 #helper functions for signal defination
 
+#def IsFiducial(event):
+#    try:
+#        return event.truth_is_fiducial == 1
+#    except RuntimeError:
+#        # this ntuple uses old variable name
+#        return event.truth_IsFiducial == 1
+
 def IsFiducial(event):
-    try:
-        return event.truth_is_fiducial == 1
-    except RuntimeError:
-        # this ntuple uses old variable name
-        return event.truth_IsFiducial == 1
+    if not (FIDUCIAL_Z_RANGE[0] <= event.mc_vtx[2] <= FIDUCIAL_Z_RANGE[1]): 
+        return False
+    if not (TruthTools.CalcApothem(event.mc_vtx[0],event.mc_vtx[1]) <= FIDUCIAL_APOTHEM):
+        return False
+    return True
 
 IsCC = lambda event: event.mc_current == 1
 IsNC = lambda event: event.mc_current == 2
@@ -56,16 +63,20 @@ def PassesNCDiffCuts(event): # An event is only considered a diffractive event i
    else:
        return False
 
+def PrintStuff(event):
+    #print(event.GetEntry(),"PionE",TruthTools.PiZeroE_diff(event),"t",TruthTools.tDef1_diff(event),bool(IsDiffractive(event) and PassesNCDiffCuts(event) and IsNC(event)), event.mc_incoming, event.GetWeight())
+    return True
+
 # In case a event satisfy multiple definations, the first takes priority.
 TRUTH_CATEGORIES = OrderedDict()
 
-TRUTH_CATEGORIES["NCDiff"] = lambda event: IsDiffractive(event) and PassesNCDiffCuts(event)
+TRUTH_CATEGORIES["NCDiff"] = lambda event: IsDiffractive(event) and PassesNCDiffCuts(event) and IsNC(event) and IsFiducial(event)
+TRUTH_CATEGORIES["NonFiducial"] = lambda event: IsDiffractive(event) and PassesNCDiffCuts(event) and IsNC(event) and not IsFiducial(event)
 TRUTH_CATEGORIES["CCQElike"] = lambda event: IsCC(event) and IsNuE(event) and not IsPi0InFinalState(event) and not IsMeson(event) and not IsHeavyBaryon(event) and not IsPhoton(event)
 TRUTH_CATEGORIES["notCCQElike"] = lambda event: IsNuE(event) and (IsPi0InFinalState(event) or IsMeson(event) or IsPhoton(event) or IsHeavyBaryon(event))
 
 TRUTH_CATEGORIES["NuEElastic"] = lambda event: IsElastic(event)
 TRUTH_CATEGORIES["NonPhaseSpace"] = lambda event: IsCC(event) and IsNuE(event) and not IsInKinematicPhaseSpace(event)
-TRUTH_CATEGORIES["NonFiducial"] = lambda event: IsCC(event) and IsNuE(event) and not IsFiducial(event)
 
 TRUTH_CATEGORIES["CCPi0"] = lambda event: IsCC(event) and IsPi0InFinalState(event)
 TRUTH_CATEGORIES["NCCohPi0"] = lambda event: IsCoherent(event) and IsNC(event) and IsPi0InFinalState(event)
@@ -85,12 +96,7 @@ TRUTH_CATEGORIES["Other"] = lambda event: (not Is2p2h(event) and not IsQE(event)
 
 # My signal is one or more of the listed categories.
 SIGNAL_DEFINATION = [
-    #"CCNuE",
     "NCDiff",
-    #"CCQElike",
-    #"notCCQElike"
-    #"CCNuEQELike",
-    #"NonPhaseSpace",
 ]
 
 #Dump some categories to other to make plots easier to read:

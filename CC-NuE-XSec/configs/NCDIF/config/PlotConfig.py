@@ -115,7 +115,9 @@ ELECTRON_ENERGY_RESIDUAL_BINNING = [-1+0.05* i for i in range(0,41)]
 NEUTRINO_ENERGY_BINNING = range(0,21)
 #NEUTRINO_ENERGY_BINNING_BIGGER = [i for i in range(6)] + [7, 10, 13, 18, 25]
 
-VISIBLE_ENERGY_BINNING = [ 0.02*i for i in range(9) ] + [0.05*i for i in range(4,9)]+ [0.1*i for i in range(5, 7)] + [0.2*i for i in range(4, 8)] 
+#VISIBLE_ENERGY_BINNING = [ 0.02*i for i in range(9) ] + [0.05*i for i in range(4,9)]+ [0.1*i for i in range(5, 7)] + [0.2*i for i in range(4, 8)] 
+VISIBLE_ENERGY_BINNING = [0.0,0.04,0.08,0.12,0.16,0.24,0.32,0.4,0.5,0.6,0.7,0.8,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3.0,3.2,3.4,3.6,3.8,4.0,4.2,4.4,4.6,4.8,5.0]
+HIGH_VISIBLE_ENERGY_BINNING = [0.5,0.55,0.6,0.65,0.7,0.8,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0,2.2,2.4]
 APOTHEM_BINNING = [50*i for i in range(17)]
 VERTEX_Y_BINNING = [100*i -1000 for i in range(21)]
 
@@ -395,9 +397,8 @@ Categories["Other"] = {
 
 HISTS_TO_MAKE = [
     "Neutrino Energy",
-    #"Visible Energy",
-    "Energy Outside Cone",
-    #"Psi*Ee",
+    #"Energy Outside Cone",
+    "PsiEe",
     "Inline Upstream Energy Weighted Position",
     #"tDef2",
     "tDef1",
@@ -413,6 +414,7 @@ HISTS_TO_MAKE = [
     "Q3",
     "Lepton Pt",
     "Visible Energy",
+    #"High Visible Energy",
     #{"variables":["Lepton Pt"],
     #"tags": {"sideband","truth_class"}
     #},
@@ -460,17 +462,22 @@ HISTS_TO_MAKE = [
     "t vs Electron Energy",
     #"Upstream Energy",
     "Inline Upstream vs Electron Energy",
-    "Weighted Inline Upstream vs Electron Energy",
+    #"Weighted Inline Upstream vs Electron Energy",
     #"Energy Outside vs Electron Energy",
     "Electron Energy vs Pion Energy",
     #"Total Upstream vs Inline Upstream",
     "Inline Upstream vs t",
     #"Ee and Eout vs Pion Energy",
-    "t vs Upstream Energy",
-    "Median Plane Shower Width",
-    "Median Shower Width vs Ee",
-    "Shower Width strip",
+    #"t vs Upstream Energy",
+    #"Median Plane Shower Width",
+    #"Median Shower Width vs Ee",
+    #"Shower Width strip",
     "t vs PiZero E",
     "True Signal Pi Zero Energy",
     "True Signal t",
+    "Epi(1-cos(pi))",
+    "Vertex Z",
+    "Vertex Apothem",
+    "True Signal Z Vertex",
+    "True Signal Vertex Apothem", 
 ]

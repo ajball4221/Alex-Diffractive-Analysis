@@ -25,7 +25,7 @@ BLUEARC = "/minerva/data/users/{}/nu_e".format(os.environ["USER"])
 GIRDOUTPUT ="/pnfs/minerva/persistent/"
 
 
-SIDEBANDS=["Coherent","Electron_Neutrino","Pi0"]
+SIDEBANDS=["Coherent","Electron_Neutrino","Pi0","Old_Pi0"]
 
 class _AnalysisConfig(object):
     Defaults = {

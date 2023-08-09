@@ -64,7 +64,8 @@ RECO_PT_RANGE= [0,1.0]
 RECO_VISE_RANGE= [0,1.2]
 
 WEXP_CUT = 2
-Reco_visEcut = 2
+Reco_visEcut = 0.5
+RECO_VISE_PI0_UPPERBOUND = Reco_visEcut + 0.3
 FRONT_DEDX_PI0_UPPERBOUND = 5
 PsiEe_CUT = 0.45
 
@@ -82,7 +83,7 @@ SAMPLE_CUTS = {
     "Signal" : [
         #precuts
         "NoCut",
-	"HasFiducialVertex", # Added by Alex
+	#"HasFiducialVertex", # Added by Alex
         "HasTracks",
         "HasNoBackExitingTracks",
         "EMLikeTrackScore",
@@ -101,22 +102,21 @@ SAMPLE_CUTS = {
         "TransverseGapScore",
         #phase space
         
-	#"Vertex_Z",
-        #"Vertex_Apothem",
-        #"High UIE",
-        #"UIEWeightedPos", #These 4 Removed by Alex
+	"Vertex_Z",
+        "Vertex_Apothem",
 	
 
 	"InlineUpstream", #alex added
 	"WeightedInline", #alex added
-        "PsiEe", #Alex got rid of Low
+        #"PsiEe",
+        "Eavail", # Alex swapped out PsiEe for Eavail
         "TotalUpstream",
         "Alex t Cut",
         "Alex Pion Energy Cut",
     ],
     "Coherent" : [
         "NoCut",
-	"HasFiducialVertex",#Alex added
+	#"HasFiducialVertex",#Alex added
         "HasTracks",
         "HasNoBackExitingTracks",
         "EMLikeTrackScore",
@@ -134,20 +134,19 @@ SAMPLE_CUTS = {
         "NonMIPClusFrac",
         "TransverseGapScore",
         #phase space
-       # "Vertex_Z",
-       # "Vertex_Apothem",
-       # "Low UIE" # Alex removed
+        "Vertex_Z",
+        "Vertex_Apothem",
 
-        #"UIEWeightedPos",
 	"InlineUpstream_Reverse", #Alex added
-        "PsiEe", #Not Low
+        #"PsiEe", #Not Low
+        "Eavail", # Swapped PsiEe out for Eavail
         "TotalUpstream",
         "Alex t Cut",
         "Alex Pion Energy Cut",
     ],
     "Electron_Neutrino" : [
         "NoCut",
-	"HasFiducialVertex", #Alex added
+	#"HasFiducialVertex", #Alex added
         "HasTracks",
         "HasNoBackExitingTracks",
         "EMLikeTrackScore",
@@ -165,21 +164,20 @@ SAMPLE_CUTS = {
         "NonMIPClusFrac",
         "TransverseGapScore",
         #phase space
-        #"Vertex_Z",
-       # "Vertex_Apothem",
-       # "High UIE",
-       #"InverseUIEWeightedPos", #Removed 4 by Alex
+        "Vertex_Z",
+        "Vertex_Apothem",
 
 	"InlineUpstream", # Alex Added
-        "PsiEe", #Got rid of Low Alex
+        #"PsiEe",
+        "Eavail", #Swapped out for PsiEe by Alex
         "TotalUpstream",
-	"WeightedInline", #Alex FLIPPED FOR EXPERIMENTATION TO NOT BE INVERTED
+	"WeightedInline", #Alex FLIPPED FOR EXPERIMENTATION TO NOT BE INVERTED (the experiment stuck)
         "Alex t Cut",
         "Alex Pion Energy Cut",
     ],
-    "Pi0" :[
+    "Old_Pi0" :[
         "NoCut",
-	"HasFiducialVertex", #Alex added
+	#"HasFiducialVertex", #Alex added
         "HasTracks",
         "HasNoBackExitingTracks",
         "EMLikeTrackScore",
@@ -197,14 +195,46 @@ SAMPLE_CUTS = {
         "NonMIPClusFrac",
         "TransverseGapScore",
         #phase space
-       #"Vertex_Z",
-       # "Vertex_Apothem",
-       # "High UIE",
-       # "UIEWeightedPos", #alex removed
+        "Vertex_Z",
+        "Vertex_Apothem",
 
 	"InlineUpstream",
 	"WeightedInline",
-        "InversePsiEe", #Alex removed LowPsiEe
+        #"InversePsiEe",
+        #"InverseEavail", #Added late in the project by Alex
+        "InverseEavailUpperPi0Cut", # Have to use this one so that we're not double counting
+        "TotalUpstream",
+        "Alex t Cut",
+        "Alex Pion Energy Cut",
+    ],
+    "Pi0" :[ # New sideband in order to try and eliminate the not ve cc event contamination in Old Pi0
+        "NoCut",
+        #"HasFiducialVertex", #Alex added
+        "HasTracks",
+        "HasNoBackExitingTracks",
+        "EMLikeTrackScore",
+        #quality cuts
+        "DSCalVisE",
+        "ODCalVisE",
+        "HasNoVertexMismatch", #Alex added
+        "VertexTrackMultiplicity",
+        "HasNoNonEMExitingTracks", #Alex added
+        "Afterpulsing",
+        "DeadTime",
+        #EM shower quality
+        #"StartPointVertexMultiplicity", #Alex removed
+        "InverseMeanFrontdEdX", #Alex inverted
+        "NonMIPClusFrac",
+        "TransverseGapScore",
+        #phase space
+        "Vertex_Z",
+        "Vertex_Apothem",
+
+        "InlineUpstream",
+        "WeightedInline",
+        #"InversePsiEe",
+        "InverseEavail", #Added late in the project by Alex
+        "EavailUpperPi0Cut", # This is what makes this sideband different from Old Pi0
         "TotalUpstream",
         "Alex t Cut",
         "Alex Pion Energy Cut",
